@@ -6,9 +6,9 @@ class Solution:
         res=1
         while l<=h:
             m=l+(h-l)//2
-            if m**2==x:
+            if m==x//m: # m*m can cause overflow 2^30*2^30 > 2^31-1, won't overflow in python but is bad practice to ignore overflow
                 return m
-            elif m**2<x:
+            elif m<x//m:
                 res=m
                 l=res+1
             else:
