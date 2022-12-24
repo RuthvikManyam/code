@@ -5,7 +5,7 @@ class Solution:
         while l<=r:
             m=l+(r-l)//2
             if self.calc(m,nums,threshold):
-                res=m
+                res=m  #r=m will alo work, can remove res
                 r=m-1
             else:
                 l=m+1
